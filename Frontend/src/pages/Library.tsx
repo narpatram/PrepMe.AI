@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Chatbot from "../components/ChatBot";
+import axios from "axios";
 
 const Library = () => {
     const [openChat, setOpenChat] = useState<boolean>(false)
@@ -45,6 +46,9 @@ const Library = () => {
       addedFrom: "User Upload",
     },
   ];
+
+  const data =  axios.get("http://127.0.0.1:8000/")
+  console.log(data)
 
   const handleRowClick = (bookId) => {
     setOpenChat(true)

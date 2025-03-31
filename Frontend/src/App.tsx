@@ -9,10 +9,13 @@ import { Box, ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import Schedule from "./pages/Schedule";
 import Chatbot from "./components/ChatBot";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const App: React.FC = () => {
+  const queryClient = new QueryClient()
   return (
-    <ThemeProvider theme={theme}>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
       <Router>
         <AppBarComponent />
         {/* Add a Box with paddingTop equal to the AppBar height */}
@@ -29,6 +32,7 @@ const App: React.FC = () => {
         </Box>
       </Router>
     </ThemeProvider>
+    </QueryClientProvider>
   );
 };
 

@@ -53,7 +53,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ filename }) => {
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", height: "500px", width: "100%", maxWidth: "100%", margin: "auto", border: "1px solid #ccc", borderRadius: "8px", overflow: "hidden" }}>
+    <Box sx={{ display: "flex", flexDirection: "column", height: "80vh", width: "100%", maxWidth: "100%", margin: "auto", border: "1px solid #ccc", borderRadius: "8px", overflow: "hidden" }}>
       {/* Chat Header */}
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2, backgroundColor: "#f5f5f5", borderBottom: "1px solid #ddd" }}>
         <Typography variant="h6" sx={{ fontWeight: "bold", color: "#011E2B" }}>
